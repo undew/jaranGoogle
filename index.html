@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jQuery.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <article id="weather">
+    </article>
+    <div id="map">
+    </div><!-- 地図を表示する div 要素(id:"map") -->
+    <div id="container">
+        <article>
+            <div>
+                <h1 class="title">GoogleMAP検索</h1>
+                <input type="text" name="id" value="大阪駅">
+                <button id="sub">送信</button>
+                <select name="style" id="style">
+                    <option value="roadmap">ROADMAP</option>
+                    <option value="satellite">SATELLITE</option>
+                    <option value="hybrid">HYBRID</option>
+                    <option value="45">４５°画像</option>
+                    <option value="terrain">TERRAIN</option>
+                </select>
+            </div>
+            <div>
+                <p class="post"></p>
+                <p>
+                <h1>ストリートビュー</h1>
+                <input type="radio" name="str" value="true">表示
+                <input type="radio" name="str" value="false">非表示
+                </p>
+            </div>
+            <div>
+                <h1>フルスクリーン</h1>
+                <input type="radio" name="ful" value="true">表示
+                <input type="radio" name="ful" value="false">非表示
+                </p>
+            </div>
+        <div>
+            <h1>マップタイプ</h1>
+            <input type="radio" name="map" value="true">表示
+            <input type="radio" name="map" value="false">非表示
+            </p>
+            <h1>ズーム</h1>
+            <input type="radio" name="zoom" value="true">表示
+            <input type="radio" name="zoom" value="false">非表示
+            </p>
+            <button id="clear">ジオコーディングクリア</button>
+        </div>
+        </article>
+    </div>
+    <div id="hotelJaran">
+        <section>  <form method="get">
+            <div class="japan-form">
+              <h1 class="title">RSS Reader</h1>
+              Region<select id="jaranregion"></select>
+              Prefecture<select id="jaranprefecture"></select>
+              LargeArea<select id="jaranlargearea"></select>
+              SmallArea
+              <select id="jaransmallarea"></select>
+              <hr />
+            </div>
+          </form>
+        </section>
+        <div id="Document"></div>
+    </div>
+    <script src="app.js"></script>
+    <script src="jaran-2-pre.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWgmXzhccSunvTQR-RufxcydHcAWHaPxk&callback=initMap"></script>
+
+</body>
+
+</html>

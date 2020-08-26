@@ -1,0 +1,65 @@
+body {
+  overflow-y: hidden;
+  display: grid;
+  grid-template:
+    "map jaran"
+    "google jaran";
+  grid-template-rows: 600px 1fr;
+  grid-template-columns: 1400px 1fr;
+}
+#map {
+  position: fixed;
+  grid-area: map;
+}
+#container {
+  grid-area: google;
+}
+#Document {
+  height: 800px;
+  overflow-y: scroll;
+}
+#container article {
+  display: flex;
+  flex-wrap: wrap;
+}
+#container article div {
+  width: 260px;
+  padding: 2em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+  margin: 0.5em;
+}
+#hotelJaran {
+  grid-area: jaran;
+}
+#weather {
+  margin: 0 auto;
+  padding: 0;
+  border: none;
+  position: fixed;
+  grid-area: map;
+  z-index: 9999;
+  margin-top: 350px;
+}
+#wtCon {
+  background-color: rgba(255, 255, 255, 0.808);
+  width: 100%;
+}
+.temp {
+  list-style: none;
+  display: flex;
+}
+.temp li {
+  padding: 1rem;
+}
+.weatherRed {
+  color: red;
+}
+.weatherBlue {
+  color: blue;
+}
+span {
+  color: black;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
